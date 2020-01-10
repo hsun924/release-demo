@@ -44,7 +44,6 @@
   <build>
     <plugins>
       <!--版本发布 会自动在git上添加TAG 并在当前版本号上加1-->
-      <!--release:prepare -Dresume=false -Darguments=-DskipTests-->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-release-plugin</artifactId>
@@ -52,9 +51,6 @@
         <configuration>
           <tagNameFormat>v@{project.version}</tagNameFormat>
           <autoVersionSubmodules>true</autoVersionSubmodules>
-          <!--<scmCommentPrefix>[发布插件]</scmCommentPrefix>-->
-          <!--<ignoreSnapshots>true</ignoreSnapshots>-->
-          <!--<allowReleasePluginSnapshot>true</allowReleasePluginSnapshot>-->
         </configuration>
       </plugin>
     </plugins>
