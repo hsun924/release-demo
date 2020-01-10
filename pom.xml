@@ -5,7 +5,7 @@
 
   <groupId>com.hsuns</groupId>
   <artifactId>release-demo</artifactId>
-  <version>1.0.5</version>
+  <version>1.0.6-SNAPSHOT</version>
 
   <name>release-demo</name>
 
@@ -20,7 +20,7 @@
   <!--版本库信息-->
   <scm>
     <developerConnection>scm:git:git@github.com:hsun924/release-demo.git</developerConnection>
-    <tag>v1.0.5</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <!--maven仓库信息-->
