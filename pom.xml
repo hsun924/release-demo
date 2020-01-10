@@ -38,8 +38,15 @@
   </distributionManagement>
 
   <dependencies>
+    <dependency>
+      <groupId>com.hsuns</groupId>
+      <artifactId>token-spring-boot-starter</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
+    </dependency>
 
   </dependencies>
+
+
 
   <build>
     <plugins>
@@ -51,6 +58,7 @@
         <configuration>
           <tagNameFormat>v@{project.version}</tagNameFormat>
           <autoVersionSubmodules>true</autoVersionSubmodules>
+          <preparationGoals>clean install</preparationGoals>
         </configuration>
       </plugin>
     </plugins>

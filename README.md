@@ -1,5 +1,9 @@
 # 无人值守maven-release-plugin插件使用
 
+## 注意
+1、开发版本必须是**xx.xx.x-SNAPSHOT**
+2、
+
 ## 配置SCM信息
 ```xml
 <!--版本库信息-->
