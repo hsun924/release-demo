@@ -38,7 +38,9 @@
         <configuration>
           <tagNameFormat>v@{project.version}</tagNameFormat>
           <autoVersionSubmodules>true</autoVersionSubmodules>
-          <scmCommentPrefix>[发布插件]</scmCommentPrefix>
+          <!--<scmCommentPrefix>[发布插件]</scmCommentPrefix>-->
+          <!--<ignoreSnapshots>true</ignoreSnapshots>-->
+          <!--<allowReleasePluginSnapshot>true</allowReleasePluginSnapshot>-->
         </configuration>
       </plugin>
     </plugins>
