@@ -38,6 +38,7 @@
         <configuration>
           <tagNameFormat>v@{project.version}</tagNameFormat>
           <autoVersionSubmodules>true</autoVersionSubmodules>
+          <scmCommentPrefix>[发布插件]</scmCommentPrefix>
         </configuration>
       </plugin>
     </plugins>
