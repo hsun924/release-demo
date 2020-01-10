@@ -23,6 +23,20 @@
     <tag>HEAD</tag>
   </scm>
 
+  <!--maven仓库信息-->
+  <distributionManagement>
+    <repository>
+      <id>xdja-deploy</id>
+      <name>Releases</name>
+      <url>http://120.194.4.152:8081/nexus/content/repositories/releases/</url>
+    </repository>
+    <snapshotRepository>
+      <id>xdja-deploy</id>
+      <name>snapshots</name>
+      <url>http://120.194.4.152:8081/nexus/content/repositories/snapshots/</url>
+    </snapshotRepository>
+  </distributionManagement>
+
   <dependencies>
 
   </dependencies>
