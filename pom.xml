@@ -5,7 +5,7 @@
 
   <groupId>com.hsuns</groupId>
   <artifactId>release-demo</artifactId>
-  <version>1.0.6-SNAPSHOT</version>
+  <version>1.0.5</version>
 
   <name>release-demo</name>
 
@@ -20,7 +20,7 @@
   <!--版本库信息-->
   <scm>
     <developerConnection>scm:git:git@github.com:hsun924/release-demo.git</developerConnection>
-    <tag>HEAD</tag>
+    <tag>v1.0.5</tag>
   </scm>
 
   <!--maven仓库信息-->
@@ -57,7 +57,9 @@
         <configuration>
           <tagNameFormat>v@{project.version}</tagNameFormat>
           <autoVersionSubmodules>true</autoVersionSubmodules>
+          <!--执行的命令  默认clean verify-->
           <preparationGoals>clean install</preparationGoals>
+          <!--允许快照版本-->
           <allowTimestampedSnapshots>true</allowTimestampedSnapshots>
         </configuration>
       </plugin>

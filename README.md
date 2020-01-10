@@ -1,8 +1,8 @@
 # 无人值守maven-release-plugin插件使用
 
 ## 注意
-1、开发版本必须是**xx.xx.x-SNAPSHOT**
-2、项目中不可存在快照版本依赖
+
+开发版本必须是**xx.xx.x-SNAPSHOT**
 
 ## 配置SCM信息
 ```xml
@@ -36,12 +36,16 @@
 ```xml
 <plugin>
 	<groupId>org.apache.maven.plugins</groupId>
-	<artifactId>maven-release-plugin</artifactId>
-	<version>2.5.3</version>
-	<configuration>
-	  <tagNameFormat>v@{project.version}</tagNameFormat>
-	  <autoVersionSubmodules>true</autoVersionSubmodules>
-	</configuration>
+    <artifactId>maven-release-plugin</artifactId>
+    <version>2.5.3</version>
+    <configuration>
+      <tagNameFormat>v@{project.version}</tagNameFormat>
+      <autoVersionSubmodules>true</autoVersionSubmodules>
+      <!--执行的命令  默认clean verify-->
+      <preparationGoals>clean install</preparationGoals>
+      <!--允许快照版本 默认false-->
+      <allowTimestampedSnapshots>true</allowTimestampedSnapshots>
+    </configuration>
 </plugin>
 ```
 
@@ -57,7 +61,7 @@ mvn -B release:clean release:prepare release:perform
 ### release:prepare
 * 生成release.properties文件
 * 检查本地项目代码中是否有未提交的修改
-* 检查项目的POM依赖或插件是否有SNAPSHOT版本
+* 检查项目的POM依赖或插件是否有SNAPSHOT版本（allowTimestampedSnapshots）
 * 更新POM，将项目的version从1.0.0-SNAPSHOT改为发布版本1.0.0
 * 确定项目tag v1.0.0
 * 更新POM，转换POM中的SCM信息，包括更新tag
