@@ -45,7 +45,8 @@ Release插件是Apache Maven团队提供的官方插件，能够为项目代码�
     </configuration>
 </plugin>
 ```
-###configuration可配置的参数
+
+### configuration可配置的参数
 
 * allowReleasePluginSnapshot:默认值false，仅用于插件本身的开发测试
 * username:访问SCM的用户名
