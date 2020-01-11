@@ -2,6 +2,8 @@
 
 Release插件是Apache Maven团队提供的官方插件，能够为项目代码库打tag，并将项目代码库中的代码发布到SCM的新版本。
 
+[官网地址](http://maven.apache.org/maven-release/maven-release-plugin/)
+
 ## 配置SCM信息
 ```xml
 <!--版本库信息-->
