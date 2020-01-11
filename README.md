@@ -1,4 +1,4 @@
-# 无人值守maven-release-plugin插件使用
+# maven-release-plugin插件使用
 
 Release插件是Apache Maven团队提供的官方插件，能够为项目代码库打tag，并将项目代码库中的代码发布到SCM的新版本。
 
@@ -69,12 +69,16 @@ Release插件是Apache Maven团队提供的官方插件，能够为项目代码�
 
 ## 执行命令
 ```sh
-# 跳过单元测试: -Darguments="-DskipTests"
-# 忽略javadoc编译错误:-Darguments="-Dmaven.javadoc.failOnError=false"
-# -B 实现无人值守发布 无需人工交互
-
+mvn release:clean release:prepare release:perform
+```
+在Jenkins等自动化构建中，需要无人值守，可以增加**-B**参数，使用如下命令
+```sh
 mvn -B release:clean release:prepare release:perform
 ```
+
+* 跳过单元测试: -Darguments="-DskipTests"
+* 忽略javadoc编译错误:-Darguments="-Dmaven.javadoc.failOnError=false"
+
 处理参数还可以在**pom.xml**文件中使用属性声明避免错误
 ```xml
 <properties>
